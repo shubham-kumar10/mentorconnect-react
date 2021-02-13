@@ -1,56 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Counter } from "./features/counter/Counter";
+import "./App.css";
+import Header from "./components/header/Header";
+import ProfileCard from "./components/profile-card/ProfileCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+    <div>
+      <header>
+        <Header />
       </header>
+      <section className="mentorlist">
+        <ProfileCard
+          id={1}
+          name={"John"}
+          photo={"https://randomuser.me/api/portraits/men/30.jpg"}
+          active={true}
+          skill={[{ name: "Java" }, { name: "JavaScript" }, { name: "CSS" }]}
+          userid={1}
+          location={"New York"}
+          organization={"Microsoft"}
+          jobTitle={"Software Engineer"}
+        />
+        <ProfileCard
+          id={1}
+          name={"Ricky John"}
+          photo={"https://randomuser.me/api/portraits/women/30.jpg"}
+          active={false}
+          skill={[{ name: "Java" }, { name: "JavaScript" }, { name: "CSS" }]}
+          userid={1}
+          location={"New York"}
+          organization={"Microsoft"}
+          jobTitle={"Software Engineer"}
+        />
+        <ProfileCard
+          id={1}
+          name={"John"}
+          photo={"https://randomuser.me/api/portraits/men/3.jpg"}
+          active={true}
+          skill={[{ name: "Java" }, { name: "JavaScript" }, { name: "CSS" }]}
+          userid={1}
+          location={"New York"}
+          organization={"Microsoft"}
+          jobTitle={"Software Engineer"}
+        />
+      </section>
     </div>
   );
 }
